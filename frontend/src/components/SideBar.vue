@@ -16,6 +16,7 @@
   
   <script>
    import VueResizable from 'vue-resizable';
+   console.log("git stash 명령어 test")
 
   export default {
     name: 'SideBar',
@@ -24,7 +25,6 @@
     },
     data() {
       return {
-  
       }
     },
     methods: {
