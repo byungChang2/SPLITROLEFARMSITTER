@@ -20,6 +20,12 @@
    console.log("git stash 명령어 test")
    console.log("git stash 명령어 test")
    console.log("git stash 명령어 test")
+   console.log("현재 나의 작업 공간은 브랜치 testcoupon이다")
+   console.log("현재 나의 작업 공간은 브랜치 testcoupon이다")
+   console.log("현재 나의 작업 공간은 브랜치 testcoupon이다")
+   console.log("현재 나의 작업 공간은 브랜치 testcoupon이다")
+
+
 
   export default {
     name: 'SideBar',
