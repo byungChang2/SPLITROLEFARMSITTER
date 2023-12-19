@@ -26,14 +26,14 @@ public class SwaggerController {
         return "예시 API";
     }
 
-    @PostMapping("/context")
+    @GetMapping("/context")
     public String context() {
         return "예시 context API";
     }
 
-    @PostMapping("/context_newkjh")
+    @GetMapping("/context_newkjh")
     public String context_newkjh() {
-        return "예시 context_newkjh";
+        return "${{message}}";
     }
 
     @Hidden
