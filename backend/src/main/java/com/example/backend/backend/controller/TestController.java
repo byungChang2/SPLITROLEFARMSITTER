@@ -15,6 +15,14 @@ public class TestController {
         String test = todoRequest.setTodoItem(pretest);
         return test;
     }
+    @PostMapping("/kjhstring")
+    public String kjhstring(@RequestBody TokjhString tokjhString) {
+        System.out.println("넘어오는 문자열 값은111? " + tokjhString.getkjhString());
+        String pretestt = tokjhString.getkjhString();
+        String testt = tokjhString.setkjhString(pretestt);
+        return testt;
+    }
+
 
     public static class TodoRequest {
         private String todoItem;
@@ -26,6 +34,19 @@ public class TestController {
         public String setTodoItem(String todoItem) {
             this.todoItem = todoItem;
             return todoItem;
+        }
+    }
+
+    public static class TokjhString {
+        private String kjhstring;
+
+        public String getkjhString() {
+            return this.kjhstring;
+        }
+
+        public String setkjhString(String kjhstring) {
+            this.kjhstring = kjhstring;
+            return kjhstring;
         }
     }
 }
