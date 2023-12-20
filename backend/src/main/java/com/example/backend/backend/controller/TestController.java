@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @PostMapping("/addItem")
     public String addItem(@RequestBody TodoRequest todoRequest) {
-        System.out.println("넘어오는 문자열 값은? " + todoRequest.getTodoItem());
+        System.out.println("넘어오는 문자열 값은_허정선? " + todoRequest.getTodoItem());
         String pretest = todoRequest.getTodoItem();
         String test = todoRequest.setTodoItem(pretest);
         return test;
