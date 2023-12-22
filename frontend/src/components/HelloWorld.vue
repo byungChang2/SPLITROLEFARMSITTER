@@ -10,6 +10,13 @@
     <button @click="sendToBackend">mbc문자열 추가</button>
     <List :items="backendList" />
     <Content/>
+    <a>-------------------------------구분선-------------------------------</a>
+    <br>
+    <br>
+    <input type="text" v-model="kjhString">
+    <button @click="sendToKjh">kjh문자열 추가</button>
+    <a>cubic 화이팅</a>
+    <List :items="kjhList" />
   </div>
 </template>
 
@@ -26,21 +33,37 @@ export default {
   data() {
     return {
       todoItem: '', 
-      backendList: [] 
+      backendList: [] ,
+      kjhString: '',
+      kjhList: [] ,
     };
   },
   methods: {
     sendToBackend() {   
       axios.post('/api/addItem', { todoItem: this.todoItem })
         .then(response => {
+          console.log("병창님 입력한 문자열",this.todoItem)
           this.backendList.push(response.data);
-          console.log(this.backendList)
+          console.log("병창님 : ",this.backendList)
+        })
+        .catch(error => {
+          console.error('Error sending data to backend', error);
+        });
+    },
+    sendToKjh() {   
+      axios.post('/api/kjhstring', { kjhString: this.kjhString })
+        .then(responses => {
+          console.log(responses);
+          console.log("지훈 입력한 문자열",this.kjhString)
+          this.kjhList.push(responses.data);
+          console.log("지훈 : ",this.kjhList)
         })
         .catch(error => {
           console.error('Error sending data to backend', error);
         });
     }
   }
+  
 }
 </script>
 
