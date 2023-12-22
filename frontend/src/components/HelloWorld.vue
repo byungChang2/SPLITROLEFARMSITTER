@@ -11,8 +11,10 @@
     <List :items="backendList" />
     <a>-------------------------------구분선-------------------------------</a>
     <br>
+    <br>
     <input type="text" v-model="kjhString">
     <button @click="sendToKjh">kjh문자열 추가</button>
+    <a>cubic 화이팅</a>
     <List :items="kjhList" />
   </div>
 </template>
