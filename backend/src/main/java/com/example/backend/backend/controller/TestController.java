@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @PostMapping("/addItem")
     public String addItem(@RequestBody TodoRequest todoRequest) {
-        System.out.println("넘어오는 문자열 값은_허정선? " + todoRequest.getTodoItem());
+        System.out.println("넘어오는 문자열 값은? " + todoRequest.getTodoItem());
         String pretest = todoRequest.getTodoItem();
         String test = todoRequest.setTodoItem(pretest);
         return test;
     }
     @PostMapping("/kjhstring")
     public String kjhstring(@RequestBody TokjhString tokjhString) {
-        System.out.println("넘어오는 문자열 값은111? " + tokjhString.getkjhString());
+        System.out.println("kjh넘어오는 문자열 값은? " + tokjhString.getkjhString());
         String pretestt = tokjhString.getkjhString();
         String testt = tokjhString.setkjhString(pretestt);
         return testt;
