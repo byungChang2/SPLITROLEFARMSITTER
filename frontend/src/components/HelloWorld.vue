@@ -9,6 +9,7 @@
     <input type="text" v-model="todoItem">
     <button @click="sendToBackend">mbc문자열 추가</button>
     <List :items="backendList" />
+    <Content/>
     <a>-------------------------------구분선-------------------------------</a>
     <br>
     <br>
@@ -20,12 +21,14 @@
 </template>
 
 <script>
-import List from './List'; 
+import List from './List';
+import Content from './Content.vue'; 
 import axios from 'axios';
 export default {
   name: 'HelloWorld',
   components: {
-    List
+    List,
+    Content
   },
   data() {
     return {
