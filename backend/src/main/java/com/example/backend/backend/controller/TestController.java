@@ -28,4 +28,25 @@ public class TestController {
             return todoItem;
         }
     }
+
+    @PostMapping("/addContent")
+    public String addContent(@RequestBody InputContent inputContent) {
+        System.out.println("content 입력"+ inputContent.getInputContent());
+        String preinput = inputContent.getInputContent();
+        String input = inputContent.setInputContent(preinput);
+        return input;
+    }
+    
+    public static class InputContent {
+        private String inputContent;
+
+        public String getInputContent(){
+            return this.inputContent;
+        }
+        
+        public String setInputContent(String inputContent){
+            this.inputContent = inputContent;
+            return inputContent;
+        }
+    }
 }
