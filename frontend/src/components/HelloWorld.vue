@@ -14,6 +14,8 @@
     <br>
     <input type="text" v-model="kjhString">
     <button @click="sendToKjh">kjh문자열 추가</button>
+    <br>
+    <br>
     <a>cubic 화이팅</a>
     <List :items="kjhList" />
   </div>
