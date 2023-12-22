@@ -37,7 +37,7 @@ public class TestController {
         }
     }
 
-<<<<<<< HEAD
+
     @PostMapping("/addContent")
     public String addContent(@RequestBody InputContent inputContent) {
         System.out.println("content 입력"+ inputContent.getInputContent());
@@ -56,7 +56,7 @@ public class TestController {
         public String setInputContent(String inputContent){
             this.inputContent = inputContent;
             return inputContent;
-=======
+
     public static class TokjhString {
         private String kjhstring;
 
@@ -67,7 +67,7 @@ public class TestController {
         public String setkjhString(String kjhstring) {
             this.kjhstring = kjhstring;
             return kjhstring;
->>>>>>> 0a3dc87f8155cf7c86a1b8781fd4badffec6fab4
+
         }
     }
 }
