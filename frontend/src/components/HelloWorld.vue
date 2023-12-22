@@ -8,6 +8,7 @@
     </p>
     <input type="text" v-model="todoItem">
     <button @click="sendToBackend">mbc문자열 추가</button>
+    <button >아무기능없는 버튼 생성featur_mbc</button>
     <List :items="backendList" />
     <a>-------------------------------구분선-------------------------------</a>
     <br>
